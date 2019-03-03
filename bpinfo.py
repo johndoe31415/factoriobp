@@ -6,5 +6,8 @@ import sys
 
 from FactorioBlueprint import FactorioBlueprint
 
-bp = FactorioBlueprint.from_file(sys.argv[1])
-bp.dump_info()
+for filename in sys.argv[1:]:
+	bp = FactorioBlueprint.from_file(filename)
+	print(filename)
+	bp.dump_info()
+	print()
